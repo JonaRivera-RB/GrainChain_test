@@ -16,7 +16,7 @@ class MapVC: UIViewController {
     var isTracking = false
     let locationManager = CLLocationManager()
     var mapViewModel = MapViewModel()
-    var routes = [Coordenates]()
+    var routes = [Coordinates]()
     var timer: Timer?
     var time = 0
     var locManager = LocationManager.shared
@@ -114,7 +114,7 @@ class MapVC: UIViewController {
     }
     
     func drawRoute(newLocation: CLLocationCoordinate2D) {
-        routes.append(Coordenates(latitude: newLocation.latitude, longitude: newLocation.longitude))
+        routes.append(Coordinates(latitude: newLocation.latitude, longitude: newLocation.longitude))
         
         mapViewModel.setupLastLocation(lastLocation: newLocation)
         
@@ -131,7 +131,7 @@ class MapVC: UIViewController {
         drawMarkets(coordinates: firstLocation, title: "Start")
     }
     
-    func drawMarkets(coordinates: Coordenates, title: String) {
+    func drawMarkets(coordinates: Coordinates, title: String) {
         let position = CLLocationCoordinate2DMake(coordinates.latitude, coordinates.longitude)
         let marker = GMSMarker(position: position)
         marker.title = title

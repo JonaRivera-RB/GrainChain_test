@@ -53,9 +53,9 @@ class Database {
         }
     }
     
-    func insertRoute(latitudes: String, longitudes: String, route: Route, completion:@escaping (_ success:Bool) ->()  ) {
+    func insertRoute(route: Route, completion:@escaping (_ success:Bool) ->()  ) {
         
-        let routeToInsert = self.routesTable.insert(self.name <- route.name , self.km <- route.km , self.time <- route.time, self.latitudes <- latitudes, self.longitudes <- longitudes)
+        let routeToInsert = self.routesTable.insert(self.name <- route.name , self.km <- route.km , self.time <- route.time, self.latitudes <- route.latitude, self.longitudes <- route.longitude)
         
         do {
             try self.database.run(routeToInsert)
@@ -89,7 +89,7 @@ class Database {
         do {
             let routes = try self.database.prepare(self.routesTable)
             for route in routes {
-                routesToReturn.append(Route(name: route[self.name], km: route[self.km], time: route[self.time]))
+                routesToReturn.append(Route(id: route[self.id], name: route[self.name], km: route[self.km], time: route[self.time], latitude: route[self.latitudes], longitude: route[self.longitudes]))
             }
             return routesToReturn
         } catch {

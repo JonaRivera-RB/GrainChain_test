@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Coordenates {
+struct Coordinates {
     let latitude: Double
     let longitude: Double
 }

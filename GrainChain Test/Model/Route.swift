@@ -10,7 +10,10 @@ import Foundation
 
 struct Route {
     
+    let id: Int
     let name: String
     let km: String
     let time: String
+    let latitude: String
+    let longitude: String
 }

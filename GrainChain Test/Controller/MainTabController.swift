@@ -10,17 +10,13 @@ import UIKit
 
 class MainTabController: UITabBarController {
     
-    //MARK: - Properties
-    
     //MARK: - Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
     }
     
     //MARK: - Helpers
-    
     private func configureViewController() {
         let Map = MapVC()
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: Map)

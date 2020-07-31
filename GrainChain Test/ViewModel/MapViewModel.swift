@@ -43,7 +43,7 @@ struct MapViewModel {
         self.lastLocationSaved = lastLocation
     }
     
-    func saveRouteInDatabase(routes: [Coordenates], forNameRoute name: String, time: Int) {
+    func saveRouteInDatabase(routes: [Coordinates], forNameRoute name: String, time: Int) {
         
         var latitudes = ""
         var longitudes = ""
@@ -56,11 +56,10 @@ struct MapViewModel {
             longitudes += String(route.longitude) + ","
         }
         
-        //let array = text.components(separatedBy: ",")
         let (h,m,s) = secondsToHoursMinutesSeconds(seconds: time)
-        let stringTime = "Mi recorrido fue de \(h) horas :\(m) minutos :\(s) segundos, felicidades!"
-        let route = Route(name: name, km: km, time: stringTime)
-        database.insertRoute(latitudes: latitudes, longitudes: longitudes, route: route) { success in
+        let stringTime = "Mi recorrido fue de \(h) horas :\(m) minutos :\(s) segundos!"
+        let route = Route(id: 0, name: name, km: km + " KM", time: stringTime, latitude: latitudes, longitude: longitudes)
+        database.insertRoute(route: route) { success in
             print("SUCCESS")
         }
     }
