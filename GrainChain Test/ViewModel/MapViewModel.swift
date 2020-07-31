@@ -12,8 +12,15 @@ import GoogleMaps
 struct MapViewModel {
     
     var lastLocationSaved: CLLocationCoordinate2D?
+    private var km: String = ""
+    private let database = Database()
     
-    func verifyIfUserHasChangedLocation(lastLocation: CLLocationCoordinate2D) -> CLLocationCoordinate2D? {
+    init() {
+        database.initDatabase()
+        database.createDatabase()
+    }
+    
+    mutating func verifyIfUserHasChangedLocation(lastLocation: CLLocationCoordinate2D) -> CLLocationCoordinate2D? {
         
         guard let lastLatitudeSaved = lastLocationSaved?.latitude else { return nil}
         guard let lastLongitudeSaved = lastLocationSaved?.longitude else { return nil}
@@ -25,6 +32,7 @@ struct MapViewModel {
         let km = distance.inKilometers()
         
         if km > 0.05 {
+            self.km = String(format: "%.3f", km)
             return lastLocation
         }else {
             return nil
@@ -33,5 +41,31 @@ struct MapViewModel {
     
     mutating func setupLastLocation(lastLocation: CLLocationCoordinate2D) {
         self.lastLocationSaved = lastLocation
+    }
+    
+    func saveRouteInDatabase(routes: [Coordenates], forNameRoute name: String, time: Int) {
+        
+        var latitudes = ""
+        var longitudes = ""
+        
+        for route in routes {
+            latitudes += String(route.latitude) + ","
+        }
+        
+        for route in routes {
+            longitudes += String(route.longitude) + ","
+        }
+        
+        //let array = text.components(separatedBy: ",")
+        let (h,m,s) = secondsToHoursMinutesSeconds(seconds: time)
+        let stringTime = "Mi recorrido fue de \(h) horas :\(m) minutos :\(s) segundos, felicidades!"
+        let route = Route(name: name, km: km, time: stringTime)
+        database.insertRoute(latitudes: latitudes, longitudes: longitudes, route: route) { success in
+            print("SUCCESS")
+        }
+    }
+    
+    private func secondsToHoursMinutesSeconds(seconds : Int) -> (Int, Int, Int) {
+        return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
 }

@@ -16,7 +16,9 @@ class MapVC: UIViewController {
     var isTracking = false
     let locationManager = CLLocationManager()
     var mapViewModel = MapViewModel()
-    var route = [CLLocationCoordinate2D]()
+    var routes = [Coordenates]()
+    var timer: Timer?
+    var time = 0
     var locManager = LocationManager.shared
     
     let actionButton: UIButton = {
@@ -54,8 +56,14 @@ class MapVC: UIViewController {
             actionButton.setTitle("Start", for: .normal)
             setupActionButtonUI(forTitle: "Start", forColor: .systemBlue)
             alertWithTextfield()
+            timer?.invalidate()
+            guard let lastRoute = routes.last else { return }
+            drawMarkets(coordinates: lastRoute, title: "Finish")
         }else {
+            routes.removeAll()
+            mapView.clear()
             locManager.isTracking = true
+            startTime()
             setupActionButtonUI(forTitle: "Stop", forColor: .systemRed)
         }
     }
@@ -67,9 +75,7 @@ class MapVC: UIViewController {
         let save = UIAlertAction(title: "Save", style: .default) { (alertAction) in
             let textField = alert.textFields![0] as UITextField
             if textField.text != "" {
-                
-                print(textField.text!)
-                self.mapView.clear()
+                self.mapViewModel.saveRouteInDatabase(routes: self.routes, forNameRoute: textField.text!, time: self.time)
             }
         }
         
@@ -108,18 +114,34 @@ class MapVC: UIViewController {
     }
     
     func drawRoute(newLocation: CLLocationCoordinate2D) {
-        route.append(newLocation)
+        routes.append(Coordenates(latitude: newLocation.latitude, longitude: newLocation.longitude))
         
         mapViewModel.setupLastLocation(lastLocation: newLocation)
         
         let path = GMSMutablePath()
-        for route in route {
+        for route in routes {
             path.addLatitude(route.latitude, longitude: route.longitude)
         }
         let polyline = GMSPolyline(path: path)
         polyline.strokeWidth = 10.0
         polyline.geodesic = true
         polyline.map = mapView
+        
+        guard let firstLocation = routes.first else { return }
+        drawMarkets(coordinates: firstLocation, title: "Start")
+    }
+    
+    func drawMarkets(coordinates: Coordenates, title: String) {
+        let position = CLLocationCoordinate2DMake(coordinates.latitude, coordinates.longitude)
+        let marker = GMSMarker(position: position)
+        marker.title = title
+        marker.map = mapView
+    }
+    
+    func startTime() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.time += 1
+        }
     }
 }
 

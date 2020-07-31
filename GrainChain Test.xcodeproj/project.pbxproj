@@ -11,6 +11,9 @@
 		138189BB24D374470000CEC6 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189BA24D374470000CEC6 /* MapViewModel.swift */; };
 		138189BD24D378450000CEC6 /* CLLocationDistanceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189BC24D378450000CEC6 /* CLLocationDistanceExtension.swift */; };
 		138189BF24D3BD5A0000CEC6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189BE24D3BD5A0000CEC6 /* LocationManager.swift */; };
+		138189C924D3CAD80000CEC6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189C824D3CAD80000CEC6 /* Database.swift */; };
+		138189CD24D3CC760000CEC6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189CC24D3CC760000CEC6 /* Route.swift */; };
+		138189CF24D3D2820000CEC6 /* Coordenates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189CE24D3D2820000CEC6 /* Coordenates.swift */; };
 		13EA879424D27CCA0015F558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA879324D27CCA0015F558 /* AppDelegate.swift */; };
 		13EA879624D27CCA0015F558 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA879524D27CCA0015F558 /* SceneDelegate.swift */; };
 		13EA879824D27CCA0015F558 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA879724D27CCA0015F558 /* MainTabController.swift */; };
@@ -28,6 +31,9 @@
 		138189BA24D374470000CEC6 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		138189BC24D378450000CEC6 /* CLLocationDistanceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationDistanceExtension.swift; sourceTree = "<group>"; };
 		138189BE24D3BD5A0000CEC6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		138189C824D3CAD80000CEC6 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		138189CC24D3CC760000CEC6 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		138189CE24D3D2820000CEC6 /* Coordenates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordenates.swift; sourceTree = "<group>"; };
 		13EA879024D27CCA0015F558 /* GrainChain Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GrainChain Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EA879324D27CCA0015F558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13EA879524D27CCA0015F558 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +71,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		138189C524D3CA7D0000CEC6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				138189CB24D3CC690000CEC6 /* Model */,
+				138189C824D3CAD80000CEC6 /* Database.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		138189CB24D3CC690000CEC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				138189CC24D3CC760000CEC6 /* Route.swift */,
+				138189CE24D3D2820000CEC6 /* Coordenates.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		13EA878724D27CCA0015F558 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +110,7 @@
 		13EA879224D27CCA0015F558 /* GrainChain Test */ = {
 			isa = PBXGroup;
 			children = (
+				138189C524D3CA7D0000CEC6 /* Data */,
 				13EA87AC24D27D7C0015F558 /* Utils */,
 				13EA87AB24D27D590015F558 /* Controller */,
 				13EA87AA24D27D580015F558 /* ViewModel */,
@@ -294,13 +319,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				13EA879824D27CCA0015F558 /* MainTabController.swift in Sources */,
+				138189C924D3CAD80000CEC6 /* Database.swift in Sources */,
 				138189B924D35CED0000CEC6 /* ViewExtensions.swift in Sources */,
 				138189BF24D3BD5A0000CEC6 /* LocationManager.swift in Sources */,
 				138189BD24D378450000CEC6 /* CLLocationDistanceExtension.swift in Sources */,
 				13EA87AE24D282C50015F558 /* MapVC.swift in Sources */,
 				13EA879424D27CCA0015F558 /* AppDelegate.swift in Sources */,
+				138189CF24D3D2820000CEC6 /* Coordenates.swift in Sources */,
 				13EA87B224D282EF0015F558 /* DetailRouteVC.swift in Sources */,
 				13EA879624D27CCA0015F558 /* SceneDelegate.swift in Sources */,
+				138189CD24D3CC760000CEC6 /* Route.swift in Sources */,
 				13EA87B024D282D80015F558 /* UserRoutesVC.swift in Sources */,
 				138189BB24D374470000CEC6 /* MapViewModel.swift in Sources */,
 			);

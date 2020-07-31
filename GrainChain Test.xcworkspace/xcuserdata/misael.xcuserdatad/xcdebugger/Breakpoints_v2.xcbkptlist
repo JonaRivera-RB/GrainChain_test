@@ -71,144 +71,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "45F5B4D4-6F00-4B75-963A-866984C50A0C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GrainChain Test/Controller/MapVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "userLocationDidChanged(location:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "01DB4315-B590-4C43-9D7E-3D61DC650377"
+            uuid = "740A7DBC-5941-47E1-9553-23B63622C8EB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrainChain Test/ViewModel/MapViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "verifyIfUserHasChangedLocation(lastLocation:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "saveRouteInDatabase(routes:forNameRoute:time:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "72BE28F1-6D58-4B05-B5D5-EB46D9921BFC"
+            uuid = "C04EFC07-9E9D-48E8-B888-36EC19C7EE6F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrainChain Test/ViewModel/MapViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "verifyIfUserHasChangedLocation(lastLocation:)"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "saveRouteInDatabase(routes:forNameRoute:time:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C04EFC07-9E9D-48E8-B888-36EC19C7EE6F - 2b7f0d01084aa4f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GrainChain_Test.MapViewModel.saveRouteInDatabase(routes: Swift.Array&lt;GrainChain_Test.Coordenates&gt;, forNameRoute: Swift.String, time: Swift.Int) -&gt; ()"
+                  moduleName = "GrainChain Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/GrainChain_test/GrainChain%20Test/GrainChain%20Test/ViewModel/MapViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "2218">
+               </Location>
+               <Location
+                  uuid = "C04EFC07-9E9D-48E8-B888-36EC19C7EE6F - b2d633830b623c7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in GrainChain_Test.MapViewModel.saveRouteInDatabase(routes: Swift.Array&lt;GrainChain_Test.Coordenates&gt;, forNameRoute: Swift.String, time: Swift.Int) -&gt; ()"
+                  moduleName = "GrainChain Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/misael/Desktop/GrainChain_test/GrainChain%20Test/GrainChain%20Test/ViewModel/MapViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50F52861-60C2-4349-B15C-6759872EC029"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GrainChain Test/Utils/LocationManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "setupLocation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8B0E4594-920F-4B95-92BC-84B43EC3FA36"
+            uuid = "0B1EF403-C780-447A-9EFA-05C7C850B1BB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GrainChain Test/Controller/MapVC.swift"
+            filePath = "GrainChain Test/Utils/LocationManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "userLocationDidChanged(location:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B655712B-A08F-486C-B824-1ABA61C73B8E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GrainChain Test/ViewModel/MapViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "verifyIfUserHasChangedLocation(lastLocation:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "00AC96DE-BA06-4FD1-9A57-CB1BCB03270E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GrainChain Test/ViewModel/MapViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "verifyIfUserHasChangedLocation(lastLocation:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0B951E15-6E46-40D1-8A78-BFD18365B157"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GrainChain Test/ViewModel/MapViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "verifyIfUserHasChangedLocation(lastLocation:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BFDFA931-F2D4-4926-96FD-9E84A1EE6BF6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GrainChain Test/ViewModel/MapViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "verifyIfUserHasChangedLocation(lastLocation:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EC93DC78-7F90-43ED-8F3D-F7410F7F4C68"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GrainChain Test/ViewModel/MapViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "verifyIfUserHasChangedLocation(lastLocation:)"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "setupLocation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
