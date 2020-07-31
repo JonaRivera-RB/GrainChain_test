@@ -5,7 +5,7 @@ target 'GrainChain Test' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
  pod 'GoogleMaps'
- pod 'GooglePlaces'
+ pod 'SQLite.swift', '~> 0.12.0'
 
   # Pods for GrainChain Test
 

@@ -4,22 +4,23 @@ PODS:
   - GoogleMaps/Base (3.9.0)
   - GoogleMaps/Maps (3.9.0):
     - GoogleMaps/Base
-  - GooglePlaces (3.9.0):
-    - GoogleMaps/Base (= 3.9.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
 
 DEPENDENCIES:
   - GoogleMaps
-  - GooglePlaces
+  - SQLite.swift (~> 0.12.0)
 
 SPEC REPOS:
   trunk:
     - GoogleMaps
-    - GooglePlaces
+    - SQLite.swift
 
 SPEC CHECKSUMS:
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
-  GooglePlaces: 1634d019549b969d40fe0ccb0b9513055adebe01
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: def46b65f99bc1871ba71102b1315441e7349cd0
+PODFILE CHECKSUM: 13d754efbdfa218300d749f565daa3b6b293402c
 
 COCOAPODS: 1.9.1

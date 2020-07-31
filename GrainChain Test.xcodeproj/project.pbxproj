@@ -172,6 +172,7 @@
 				13EA878D24D27CCA0015F558 /* Frameworks */,
 				13EA878E24D27CCA0015F558 /* Resources */,
 				919D3C7603D3B9661FCB38E9 /* [CP] Copy Pods Resources */,
+				939E2F606BE462A64FE37F61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +267,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrainChain Test/Pods-GrainChain Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		939E2F606BE462A64FE37F61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrainChain Test/Pods-GrainChain Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GrainChain Test/Pods-GrainChain Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GrainChain Test/Pods-GrainChain Test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
