@@ -58,12 +58,17 @@ class DetailRouteVC: UIViewController {
     }
     
     private var textToShare: String?
+    private let database = Database()
     
     //MARK: -Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupLabels()
+        database.initDatabase()
+        
+        let removeRoute = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(deleteButtonTapped))
+        navigationItem.rightBarButtonItems = [removeRoute]
     }
     
     func initRoute(route: Route) {
@@ -71,6 +76,15 @@ class DetailRouteVC: UIViewController {
     }
     
     //MARK: -Helpers
+    @objc func deleteButtonTapped() {
+        guard let routeId = route?.id else { return }
+        database.deletePlace(idRoute: routeId) { success in
+            if success {
+                self.showAlert()
+            }
+        }
+    }
+    
     @objc func shareButtonTapped() {
         
         guard let textToShare = textToShare else { return }
@@ -116,6 +130,17 @@ class DetailRouteVC: UIViewController {
         distanceLbl.text = route.km + " recorridos c:"
         timeOfRouteLbl.text = route.time
         drawRoute(latitudes: route.latitude, longitudes: route.longitude)
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "GranChain Route", message: "The route was delete", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { alert in
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }))
+        
+        self.present(alert, animated:true, completion: nil)
     }
     
     private func drawRoute(latitudes: String, longitudes: String) {
