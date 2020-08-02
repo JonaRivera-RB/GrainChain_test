@@ -15,6 +15,7 @@
 		138189CD24D3CC760000CEC6 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189CC24D3CC760000CEC6 /* Route.swift */; };
 		138189CF24D3D2820000CEC6 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189CE24D3D2820000CEC6 /* Coordinates.swift */; };
 		138189D124D456CD0000CEC6 /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138189D024D456CD0000CEC6 /* RouteCell.swift */; };
+		13DB528C24D7567200F0426C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DB528B24D7567200F0426C /* Main.storyboard */; };
 		13EA879424D27CCA0015F558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA879324D27CCA0015F558 /* AppDelegate.swift */; };
 		13EA879624D27CCA0015F558 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA879524D27CCA0015F558 /* SceneDelegate.swift */; };
 		13EA879824D27CCA0015F558 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA879724D27CCA0015F558 /* MainTabController.swift */; };
@@ -23,7 +24,6 @@
 		13EA87AE24D282C50015F558 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA87AD24D282C50015F558 /* MapVC.swift */; };
 		13EA87B024D282D80015F558 /* UserRoutesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA87AF24D282D80015F558 /* UserRoutesVC.swift */; };
 		13EA87B224D282EF0015F558 /* DetailRouteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EA87B124D282EF0015F558 /* DetailRouteVC.swift */; };
-		13EA87B424D284610015F558 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EA87B324D284610015F558 /* Main.storyboard */; };
 		D100539C54F3847424254690 /* Pods_GrainChain_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E02507039AFA5F3DF1FB649E /* Pods_GrainChain_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +36,7 @@
 		138189CC24D3CC760000CEC6 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		138189CE24D3D2820000CEC6 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		138189D024D456CD0000CEC6 /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
+		13DB528B24D7567200F0426C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		13EA879024D27CCA0015F558 /* GrainChain Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GrainChain Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EA879324D27CCA0015F558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13EA879524D27CCA0015F558 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		13EA87AD24D282C50015F558 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		13EA87AF24D282D80015F558 /* UserRoutesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRoutesVC.swift; sourceTree = "<group>"; };
 		13EA87B124D282EF0015F558 /* DetailRouteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouteVC.swift; sourceTree = "<group>"; };
-		13EA87B324D284610015F558 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		92CD8431590F0790BF2993BB /* Pods-GrainChain Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrainChain Test.debug.xcconfig"; path = "Target Support Files/Pods-GrainChain Test/Pods-GrainChain Test.debug.xcconfig"; sourceTree = "<group>"; };
 		E02507039AFA5F3DF1FB649E /* Pods_GrainChain_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrainChain_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E131736726EA6FC6BF2FCF55 /* Pods-GrainChain Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrainChain Test.release.xcconfig"; path = "Target Support Files/Pods-GrainChain Test/Pods-GrainChain Test.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,8 +110,8 @@
 				13EA87A724D27D520015F558 /* Model */,
 				13EA879324D27CCA0015F558 /* AppDelegate.swift */,
 				13EA879524D27CCA0015F558 /* SceneDelegate.swift */,
+				13DB528B24D7567200F0426C /* Main.storyboard */,
 				13EA879E24D27CD20015F558 /* LaunchScreen.storyboard */,
-				13EA87B324D284610015F558 /* Main.storyboard */,
 				13EA87A124D27CD20015F558 /* Info.plist */,
 			);
 			path = "GrainChain Test";
@@ -241,7 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13EA87B424D284610015F558 /* Main.storyboard in Resources */,
+				13DB528C24D7567200F0426C /* Main.storyboard in Resources */,
 				13EA87A024D27CD20015F558 /* LaunchScreen.storyboard in Resources */,
 				13EA879D24D27CD20015F558 /* Assets.xcassets in Resources */,
 			);

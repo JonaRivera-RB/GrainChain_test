@@ -33,10 +33,10 @@ class MapVC: UIViewController {
     //MARK: -life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        locManager.delegate = self
-        
         setupGoogleMapInView()
         setupUI()
+        
+        locManager.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
