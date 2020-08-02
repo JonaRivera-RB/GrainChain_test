@@ -12,6 +12,7 @@ import CoreLocation
 protocol LocationManagerChangesDelagate {
     func userLocationDidChanged(location: CLLocationCoordinate2D)
     func showUserLocationInMap(location: CLLocationCoordinate2D?)
+    func isTrackingModeOn(location: CLLocationCoordinate2D)
 }
 
 class LocationManager:NSObject {
@@ -20,6 +21,7 @@ class LocationManager:NSObject {
     private let locationManager = CLLocationManager()
     private var currentAccurateLocation:CLLocation?
     var isTracking = false
+    var isTrackingModeOn = false
     var delegate: LocationManagerChangesDelagate?
     
     override init() {
@@ -76,6 +78,8 @@ extension LocationManager:CLLocationManagerDelegate {
         
         if isTracking {
             self.delegate?.userLocationDidChanged(location: location.coordinate)
+        }else if isTrackingModeOn {
+            self.delegate?.isTrackingModeOn(location: location.coordinate)
         }
     }
     

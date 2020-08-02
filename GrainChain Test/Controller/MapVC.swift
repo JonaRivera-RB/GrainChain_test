@@ -19,6 +19,7 @@ class MapVC: UIViewController {
     var routes = [Coordinates]()
     var timer: Timer?
     var time = 0
+    var isTrackingModeOn = false
     var locManager = LocationManager.shared
     
     let actionButton: UIButton = {
@@ -27,6 +28,15 @@ class MapVC: UIViewController {
         button.backgroundColor = .systemBlue
         button.setTitle("Start", for: .normal)
         button.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    let trackingModeButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.tintColor = .white
+        button.backgroundColor = .systemBlue
+        button.setTitle("tracking on", for: .normal)
+        button.addTarget(self, action: #selector(trackingButtonTapped), for: .touchUpInside)
         return button
     }()
     
@@ -68,6 +78,13 @@ class MapVC: UIViewController {
         }
     }
     
+    @objc func trackingButtonTapped() {
+        isTrackingModeOn = isTrackingModeOn ? false : true
+        let title = isTrackingModeOn ? "Tracking off" : "Tracking on"
+        trackingModeButton.setTitle(title, for: .normal)
+        locManager.isTrackingModeOn = isTrackingModeOn
+    }
+    
     //MARK: -Functions
     func alertWithTextfield() {
         let alert = UIAlertController(title: "GranChain Route", message: "Please input title for your route", preferredStyle: UIAlertController.Style.alert)
@@ -100,6 +117,11 @@ class MapVC: UIViewController {
         actionButton.centerX(inView: self.view)
         
         actionButton.layer.cornerRadius = 50 / 2
+        
+        view.addSubview(trackingModeButton)
+        trackingModeButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, right: view.rightAnchor, paddingTop: 20, paddingRight: 10, width: 150, height: 40)
+        
+        trackingModeButton.layer.cornerRadius = 40 / 2
     }
     
     private func setupGoogleMapInView() {
@@ -147,6 +169,11 @@ class MapVC: UIViewController {
 
 //MARK: - CLLocationManagerDelegate
 extension MapVC: LocationManagerChangesDelagate {
+    
+    func isTrackingModeOn(location: CLLocationCoordinate2D) {
+        setupCameraMap(location: location)
+    }
+    
     func showUserLocationInMap(location: CLLocationCoordinate2D?) {
         guard let location = location else { return }
         mapView.isMyLocationEnabled = true
