@@ -77,12 +77,7 @@ class DetailRouteVC: UIViewController {
     
     //MARK: -Helpers
     @objc func deleteButtonTapped() {
-        guard let routeId = route?.id else { return }
-        database.deletePlace(idRoute: routeId) { success in
-            if success {
-                self.showAlert()
-            }
-        }
+        showAlert()
     }
     
     @objc func shareButtonTapped() {
@@ -123,6 +118,17 @@ class DetailRouteVC: UIViewController {
         shareButton.layer.cornerRadius = 50 / 2
     }
     
+    private func removeRoute() {
+        guard let routeId = route?.id else { return }
+        database.deletePlace(idRoute: routeId) { success in
+            if success {
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
+    }
+    
     private func setupLabels() {
         guard let route = route else { return }
         
@@ -133,12 +139,13 @@ class DetailRouteVC: UIViewController {
     }
     
     func showAlert() {
-        let alert = UIAlertController(title: "GranChain Route", message: "The route was delete", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { alert in
-            DispatchQueue.main.async {
-                self.navigationController?.popViewController(animated: true)
-            }
+        let alert = UIAlertController(title: "GranChain Route", message: "The route will be delete", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Sure", style: .destructive, handler: { alert in
+            self.removeRoute()
         }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { alert in }))
         
         self.present(alert, animated:true, completion: nil)
     }
